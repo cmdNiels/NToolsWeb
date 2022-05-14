@@ -18,7 +18,7 @@ export default function Navbar({ pages })
 					<Link href="/">
 						<div className="mr-2 hover:bg-main-700 px-3 py-2 rounded-md h-10 cursor-pointer">
 							<p className="font-semibold">
-								cmdNiels
+								NTools
 							</p>
 						</div>
 					</Link>
