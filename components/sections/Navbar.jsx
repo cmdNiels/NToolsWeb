@@ -15,7 +15,7 @@ export default function Navbar({ pages })
 		<>
 			<header className="text-main-100 bg-main-800 shadow-sm mb-3">
 				<div className="p-3 flex-row items-center flex-no-wrap overflow-hidden md:flex hidden">
-					<Link href="/">
+					<Link key="/" href="/">
 						<div className="mr-2 hover:bg-main-700 px-3 py-2 rounded-md h-10 cursor-pointer">
 							<p className="font-semibold">
 								NTools
@@ -27,7 +27,7 @@ export default function Navbar({ pages })
 							pages.map(i => (
 								<>
 									<div className="ml-3" />
-									<NavbarButton href={"/" + i.toLowerCase()} text={i.charAt(0).toUpperCase() + i.slice(1)} />
+									<NavbarButton key="/" href={"/" + i.toLowerCase()} text={i.charAt(0).toUpperCase() + i.slice(1)} />
 								</>
 							))
 						}
@@ -49,13 +49,12 @@ export default function Navbar({ pages })
 						<div onClick={switchMenu} className="pt-1 md:hidden flex flex-col">
 							{
 								pages.map(i => (
-									<NavbarButton href={"/" + i.toLowerCase()} text={i.charAt(0).toUpperCase() + i.slice(1)} />
+									<NavbarButton key={i} href={"/" + i.toLowerCase()} text={i.charAt(0).toUpperCase() + i.slice(1)} />
 								))
 							}
 						</div>
 					}
 				</div>
-
 			</header>
 		</>
 	);

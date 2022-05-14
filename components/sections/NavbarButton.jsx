@@ -5,7 +5,7 @@ export default function NavbarButton({ text, href })
 {
     return (
         <>
-            <Link href={href}>
+            <Link key={href} href={href}>
                 <div className="hover:bg-main-700 px-3 py-2 rounded-md cursor-pointer">
                     {text}
                 </div>
